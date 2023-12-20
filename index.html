@@ -1,99 +1,95 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8"/>
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Chocolate</title>
-        <link rel="stylesheet" href="styles.css"/>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+        <title>Personal Portafolio</title>
     </head>
-    <body>
-        <header id="header">
-            <div class="logo">
-            <img id="header-img" alt="logo" src="data:image/png;base64,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"/>
-            <h1 >Chocolate to rico</h1>
-            </div>
-            <nav id="nav-bar">
-                <ul>
-                    <li><a class="nav-link" href="#caractersiticas">Caracteristicas</a></li>
-                    <li><a class="nav-link" href="#informacion">Como se usa</a></li>
-                    <li><a class="nav-link" href="#precios">Precios</a></li>
-                </ul>
-            </nav>
-        </header>
+    <body> 
+        <nav id="navbar">
+            <ul>
+                <li><a href="#welcome-section"><p>About</p></a></li>
+                <li><a href="#projects"><p>Work</p></a></li>
+                <li><a href="#content"><p>Contact</p></a></li>
+            </ul>
+        </nav>
         <main>
-            <form id="form" method="post" action="https://www.freecodecamp.com/email-submit">
-                <label>Delicioso Chocolate de la Mejor Calidad</label>
-                <input name="email" id="email" type="email" placeholder="Ingrese su direccion email"/>
-                <input type="submit" id="submit" value="Unete!"/>
-            </form>
-            <div id="caractersiticas" class="caracteristicas">
-                <div class="car uno-tres">
-                    <img class="img" src="https://www.cestalia.com/blog/wp-content/uploads/2020/06/chocolate-y-cacao.jpg">
-                    <div class="tex">
-                        <h1>Quality Assurance</h1>
-                        <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
-                    </div>
-                </div>
-                <div class="car car-dos">
-                    <img class="img"  src="https://st2.depositphotos.com/1362337/10378/i/450/depositphotos_103789218-stock-photo-detail-of-little-chocolate-car.jpg"/>
-                    <div class="tex">
-                        <h1>Fast Shipping</h1>
-                        <p>We make sure you recieve your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.</p>
-                    </div>
-                </div>
-                <div class="car car-tres">
-                    <img class="img" src="https://chocolatestorras.com/wp-content/uploads/2021/10/Chocolate-a-la-taza-espeso-con-cacao.jpg">
-                    <div class="tex">
-                        <h1>Quality Assurance</h1>
-                        <p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.</p>
-                    </div>
-                </div>
-                
+            <section id="welcome-section" class="welcome-section">
+                <div>
+                <h1>Hey, I'am Andrys :D</h1>
+                <p>Buy bitcoins</p>
             </div>
-            <div id="informacion" class="informacion">
-                <div class="video">
-                    <iframe alt="video-de-chocolate" id="video" src="https://youtu.be/92Z6W9vMrJY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </section>
+            <section id="projects" class="projects">
+                <h2>These are some of my projects</h2>
+                <div class="projects-grid">
+                    <a target="_blank" class="project" href="https://www.xataka.com/energia/reactor-fusion-nuclear-japones-jt-60sa-acaba-hacer-a-iter-favor-impagable">
+                        <img class="project-img" src="https://play-lh.googleusercontent.com/fDaDU6K2EsuHvgB5ZeXkbzJEtS0xlbczJa4bb1kFpP9O9gswWNpehUSv0cW1EfQsXA" alt="project">
+                        <p class="project-tile"><span class="marcado">< </span>proyecsto1<span class="marcado"> /></span></p>
+                    </a>
+                    <a target="_blank" class="project" href="https://www.xataka.com/energia/reactor-fusion-nuclear-japones-jt-60sa-acaba-hacer-a-iter-favor-impagable">
+                        <img class="project-img" src="https://play-lh.googleusercontent.com/fDaDU6K2EsuHvgB5ZeXkbzJEtS0xlbczJa4bb1kFpP9O9gswWNpehUSv0cW1EfQsXA" alt="project">
+                        <p class="project-tile"><span class="marcado">< </span>proyecsto2<span class="marcado"> /></span></p>
+                    </a>
+                    <a target="_blank" class="project" href="https://www.xataka.com/energia/reactor-fusion-nuclear-japones-jt-60sa-acaba-hacer-a-iter-favor-impagable">
+                        <img class="project-img" src="https://play-lh.googleusercontent.com/fDaDU6K2EsuHvgB5ZeXkbzJEtS0xlbczJa4bb1kFpP9O9gswWNpehUSv0cW1EfQsXA" alt="project">
+                        <p class="project-tile"><span class="marcado">< </span>proyecsto3<span class="marcado"> /></span></p>
+                    </a>
+                    <a target="_blank" class="project" href="https://www.xataka.com/energia/reactor-fusion-nuclear-japones-jt-60sa-acaba-hacer-a-iter-favor-impagable">
+                        <img class="project-img" src="https://play-lh.googleusercontent.com/fDaDU6K2EsuHvgB5ZeXkbzJEtS0xlbczJa4bb1kFpP9O9gswWNpehUSv0cW1EfQsXA" alt="project">
+                        <p class="project-tile"><span class="marcado">< </span>proyecsto4<span class="marcado"> /></span></p>
+                    </a>
+                    <a target="_blank" class="project" href="https://www.xataka.com/energia/reactor-fusion-nuclear-japones-jt-60sa-acaba-hacer-a-iter-favor-impagable">
+                        <img class="project-img" src="https://play-lh.googleusercontent.com/fDaDU6K2EsuHvgB5ZeXkbzJEtS0xlbczJa4bb1kFpP9O9gswWNpehUSv0cW1EfQsXA" alt="project">
+                        <p class="project-tile"><span class="marcado">< </span>proyecsto5<span class="marcado"> /></span></p>
+                    </a>
+                    <a target="_blank" class="project" href="https://www.xataka.com/energia/reactor-fusion-nuclear-japones-jt-60sa-acaba-hacer-a-iter-favor-impagable">
+                        <img class="project-img" src="https://play-lh.googleusercontent.com/fDaDU6K2EsuHvgB5ZeXkbzJEtS0xlbczJa4bb1kFpP9O9gswWNpehUSv0cW1EfQsXA" alt="project">
+                        <p class="project-tile"><span class="marcado">< </span>proyecsto6<span class="marcado"> /></span></p>
+                    </a>
                 </div>
-            </div>
-            <div id="precios" class="precios">
-                <div class="price">
-                    <div class="cont">
-                        <h1>Chocolate Blanco</h1>
-                        <div>
-                            <p>Es blanco</p>
-                            <p>Es rico</p>
-                            <p>wiiiii</p>
-                        </div>
-                        <button>Select</button>
-                    </div>
+                <a class="bottom" href="https://www.xataka.com/energia/reactor-fusion-nuclear-japones-jt-60sa-acaba-hacer-a-iter-favor-impagable   ">Show all</a>
+            </section>
+            <section id="content" class="content">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="medio">
+                    <h1>Let's work together...</h1>
+                    <p class="curs">How do you take your coffee?</p>
                 </div>
-                <div class="price">
-                    <div class="cont">
-                        <h1>Chocolate Negro</h1>
-                         <div>  
-                            <p>Es mas fuerte</p>
-                            <p>Es rico</p>
-                            <p>wiiiii</p>
-                        </div>
-                        <button>Select</button>
-                    </div>
+                <div class="iconos">
+                    <a href="https://www.facebook.com/freecodecamp/" target="_blank"> 
+                        <i class="fab fa-facebook-f"></i> Facebook
+                      </a>
+                      <a href="https://twitter.com/freecodecamp/" target="_blank">
+                        <i class="fab fa-twitter"></i> Twitter
+                      </a>
+                      <a href="https://instagram.com/freecodecamp" target="_blank">
+                        <i class="fab fa-instagram"></i> Instagram
+                      </a>
+                      <a href="https://www.linkedin.com/school/free-code-camp/" target="_blank">
+                        <i class="fab fa-linkedin-in"></i> LinkedIn
+                      </a>
+                      <a href="https://www.youtube.com/freecodecamp" target="_blank" id="profile-link">
+                        <i class="fab fa-github"></i> GitHub 
+                      </a>
                 </div>
-                <div class="price">
-                    <div class="cont">
-                        <h1>Crema Chocolate</h1>
-                        <div>
-                            <p>Es no solida</p>
-                            <p>Es rico</p>
-                            <p>wiiiii</p>
-                        </div>
-                        <button>Select</button>
-                    </div>
+                <div></div>
+                <div></div>
+                <div class="lin"></div>
+                <div class="fondo">
+                    <p>**This is just a fake portfolio. All the projects and contact details given are not real.</p>
+                    <div></div>
+                    <div></div>
+                    <p>© Created for freeCodeCamp</p>
                 </div>
-            </div>
+                <div></div>
+            </section>
         </main>
-        <footer>
-            <h1>Privacy Terms Contact</h1>
-            <p>Copyright 2016, Original Trombones</p>
-        </footer>
     </body>
 </html>
