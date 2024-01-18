@@ -1,7 +1,7 @@
 {
   "name": "LandPageAngular17",
   "short_name": "LandPageAngular17",
-  "theme_color": "#1976d2",
+  "theme_color": "#000e1b",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
