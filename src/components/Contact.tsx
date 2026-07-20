@@ -15,8 +15,8 @@ const contactLinks = [
   },
   {
     icon: Mail,
-    label: "andrysmoreno@gmail.com",
-    href: "mailto:andrysmoreno@gmail.com",
+    label: "andrysmoreno4@gmail.com",
+    href: "mailto:andrysmoreno4@gmail.com",
     description: "Send me an email",
   },
   {
@@ -104,7 +104,7 @@ export default function Contact() {
             <GitHubStats />
 
             <a
-              href="mailto:andrysmoreno@gmail.com"
+              href="mailto:andrysmoreno4@gmail.com"
               className="flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-[#2563EB] text-[#FAFAFA] text-sm font-medium hover:bg-[#3B82F6] transition-all"
             >
               <Mail size={16} />
