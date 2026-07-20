@@ -15,14 +15,14 @@ const contactLinks = [
   },
   {
     icon: Mail,
-    label: "andrysdm@gmail.com",
-    href: "mailto:andrysdm@gmail.com",
+    label: "andrysmoreno@gmail.com",
+    href: "mailto:andrysmoreno@gmail.com",
     description: "Send me an email",
   },
   {
     icon: SiCodeforces,
     label: "Codeforces",
-    href: "https://codeforces.com/profile/andrysdm",
+    href: "https://codeforces.com/profile/andrys",
     description: "View my competitive programming profile",
   },
 ];
@@ -104,7 +104,7 @@ export default function Contact() {
             <GitHubStats />
 
             <a
-              href="mailto:andrysdm@gmail.com"
+              href="mailto:andrysmoreno@gmail.com"
               className="flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-[#2563EB] text-[#FAFAFA] text-sm font-medium hover:bg-[#3B82F6] transition-all"
             >
               <Mail size={16} />
